@@ -1,28 +1,12 @@
-import React , {useState} from "react";
-import BlackList from "../assets/MoviePoster/BlackList.jpg";
-import FatherHood from "../assets/MoviePoster/FatherHood.jpg";
-import Infinite from "../assets/MoviePoster/Infinite.jpg";
-import Jumanji from "../assets/MoviePoster/Jumanji.jpg";
-import Lupin from "../assets/MoviePoster/Lupin.jpg";
-import Vikings from "../assets/MoviePoster/Vikings.jpg";
-import WrathOfMan from "../assets/MoviePoster/WrathOfMan.jpg";
+import React from "react";
+
 import MovieCard from "./MovieCard";
 import Modale from "./Modal";
-import './MovieList.css'
+import "./MovieList.css";
 
-const MovieList = ({ rate, inputText }) => {
-  const [arr, setArr] = useState([
-    { Img: WrathOfMan, Name: "Wrath Of Man", rate: "2" },
-    { Img: Jumanji, Name: "Jumanji: The next level", rate: "1" },
-    { Img: Infinite, Name: "Infinite", rate: "3" },
-    { Img: FatherHood, Name: "Fatherhood", rate: "1" },
-    { Img: BlackList, Name: "The Blacklist", rate: "4" },
-    { Img: Vikings, Name: "Vikings", rate: "5" },
-    { Img: Lupin, Name: "Lupin", rate: "3" },
-  ])
-   
+const MovieList = ({ rate, inputText,arr ,setArr }) => {
+  
 
- 
   return (
     <div className="background">
       {arr
@@ -36,7 +20,7 @@ const MovieList = ({ rate, inputText }) => {
         ))}
 
       {/* <div className="addBtn"><h2 onClick={handelClick}>[+]</h2></div>       */}
-      <Modale setArr ={setArr} arr={arr} />
+      <Modale setArr={setArr} arr={arr} />
     </div>
   );
 };
